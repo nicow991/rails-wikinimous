@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row justify-content-center " >
+
+      <div div style="width: auto; height: auto; border: 1px solid black; border-radius: 15px; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);">
+        <h1>articles!</h1>
+        <ol>
+          <% @articles.each do |article| %>
+            <li>
+            <input type="checkbox"<% if article[:completed] %> checked <% end %>> <%= link_to "#{article.title}", article_path(article) %>.
+            </li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  <div class='row justify-content-center '>
+    <%= link_to "new article", new_article_path, class: 'btn btn-success', style:"border: 1px solid black; width: auto; border-radius: 15px; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);"%>
+  </div>
+</div>

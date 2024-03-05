@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row justify-content-center ">
+    <div div style="width: auto; height: auto; border: 1px solid black; border-radius: 15px; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);">
+      <h1><%= @article.title %></h1>
+      <h3><%= @article.content %></h3>
+
+      <%= link_to "destroy", article_path(@article), data:{ turbo_method: :delete, turbo_confirm: "are you sure?"}, class: 'btn btn-danger', style:"border: 1px solid black; border-radius: 15px; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);" %>
+      <%= link_to "Articles", articles_path, class: 'btn btn-primary', style:"border: 1px solid black; border-radius: 15px; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);" %>
+      <%= link_to "edit", edit_article_path(@article), class: 'btn btn-warning', style:"border: 1px solid black; border-radius: 15px; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);" %>
+    </div>
+  </div>
+</div>
